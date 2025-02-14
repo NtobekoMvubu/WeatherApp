@@ -1,0 +1,12 @@
+.headerComponent{
+padding: 20px;
+background-image: url('../assets/WeatherAppHeader.jpg');
+color: white;
+background-size: 100% 100%;
+background-repeat: no-repeat;
+}
+
+.webTitle{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+

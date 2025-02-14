@@ -1,0 +1,10 @@
+.searchComponent{
+    display: flex;
+    justify-content:center;
+    background-color: grey;
+    padding: 35px;
+}
+
+#searchInput{
+    font-size: 1.5rem;
+}
