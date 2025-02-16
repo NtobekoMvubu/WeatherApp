@@ -1,10 +1,10 @@
 import HeaderComponent from './HeaderComponent/HeaderComponent.jsx'
-import SearchComponent from './SearchComponent/SearchComponent.jsx';
+import MainContentContainer from './MainContentContiainer/MainComponent.jsx'
 function App() {
   return(
     <>
       <HeaderComponent/>
-      <SearchComponent/>
+      <MainContentContainer/>
     </>
   );
 
