@@ -1,0 +1,27 @@
+#forecastContainer{
+    background-color: lightskyblue;
+    height: 33.3333%;
+    border-radius: 20px;
+    color: white;
+    width: 100;
+    display: flex;
+    justify-content: space-around;
+}
+
+#weatherPic{
+    margin: 0;
+}
+
+
+#minTemp{
+    color: grey;
+}
+
+#topX{
+    display: flex;
+    justify-content: space-around;
+}
+
+#chanceOfRain{
+    text-align: center;
+}

@@ -24,7 +24,7 @@ function MainWeather(){
            <>
            <section className={styles.mainWeatherInfo}>
                 <section>
-                <img id={styles.weatherPicture} src={weather.current.condition.icon}/>
+                <img id={styles.weatherPicture} src={weather.current.condition.icon} alt="tests"/>
                 </section>
                 <section>
                 <p id={styles.date}>{extractDateSubString()}</p>
