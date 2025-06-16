@@ -1,0 +1,28 @@
+.hourlyForecastContainer{
+    background-color: #202C3C;
+    border-radius: 25px;
+    margin: 30px;
+    padding: 20px;
+}
+
+.hourlyContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+#hourForecast_label{
+    color: white;
+}
+
+#dayForecast_Label{
+    color: white;
+    margin: 0px;
+}
+
+.ForecastContainer{
+    border-radius: 25px;
+    background-color: #202C3C;
+    height: 280px;
+    width: 30%;
+    padding: 20px;
+}

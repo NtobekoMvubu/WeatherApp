@@ -4,7 +4,8 @@ import {format} from "date-fns"
 import { weatherContext } from "../MainComponent";
 function MainWeather(){
     const {weather, setWeather} = useContext(weatherContext)
-    let locationTitle = weather? weather.location.name + ', ' + weather.location.country :  "Location"
+    let locationTitle = weather? weather.location.region + ', ' + weather.location.country :  "Location"
+    let temp = weather ? weather.current.temp_c : "temp";
     console.log(weather);
 
     function extractTimeSubstring() {
@@ -21,25 +22,17 @@ function MainWeather(){
     return (
         <section className={styles.mainWeather}>
             {!weather ? <p className={weather}>"No Information Found..."</p>:
-           <>
-           <section className={styles.mainWeatherInfo}>
-                <section>
-                <img id={styles.weatherPicture} src={weather.current.condition.icon} alt="tests"/>
+            <section className={styles.mainInfo}>
+                <section className={styles.information}>
+                    <h2>{locationTitle}</h2>
+                    <h5>Chance of rain</h5>
+                    <h2>{temp}°C</h2>
                 </section>
                 <section>
-                <p id={styles.date}>{extractDateSubString()}</p>
-                <p id={styles.time}>{extractTimeSubstring()}</p>
-                <h3 id={styles.location}>{locationTitle}</h3>                  
-                </section>
-                
-           </section>             
-             <p id={styles.temp}>{weather.current.temp_c}°C</p>
-             <p>{weather.current.condition.text}</p>
-             <p>Real Feel: {weather.current.feelslike_c}°C</p>
-             <p>Humidity: {weather.current.humidity}%</p>
-             <p>Wind: {weather.current.wind_kph} km/h ({weather.current.wind_dir})</p>
-           </>          
-            }
+                    <img id={styles.weatherPicture} src = {weather.current.condition.icon}/>
+                </section>  
+            </section>
+            }       
         </section>
     );
 }

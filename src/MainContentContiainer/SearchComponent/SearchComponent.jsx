@@ -4,12 +4,13 @@ import styles from './SearchComponent.module.css'
 function SearchComponent(){
     const [city, setCity] = useState("");
     const key = import.meta.env.VITE_APP_WEATHERKEY
-    const {weather, setWeather, forecast, setForecast} = useContext(weatherContext)
+    const {weather, setWeather, forecast, setForecast, alert, setAlert} = useContext(weatherContext)
 
 
     function handleClick(){
         fetchCurrentWeather();
         fetchForecast();
+        fetchAlerts();
     }
 
     const fetchCurrentWeather = () =>{
@@ -18,6 +19,15 @@ function SearchComponent(){
         .then((resp)=> resp.json())
         .then(data =>{ 
             setWeather(w => data);
+        } )
+    }
+
+    const fetchAlerts = () =>{
+        const url = `http://api.weatherapi.com/v1/alerts.json ?key=${key}&q=${city}`
+         fetch(url)
+        .then((resp)=> resp.json())
+        .then(data =>{ 
+            setAlert(w => data.alerts.alert);
         } )
     }
 

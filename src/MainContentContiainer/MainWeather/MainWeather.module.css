@@ -1,21 +1,19 @@
 .mainWeather{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: white;
-    background-color: lightskyblue;
+    color: black;
     border-radius: 20px;
-    padding: 5px;
     margin-top: 1px;
-    width: 33%;
-    
+    margin-left: 0px;
+    color: white;
 }
 
 
 
-.mainWeatherInfo{
+.mainInfo{
     display: flex;
     justify-content: space-evenly;
 }
-
+  
 #weatherPicture{
     width: 200px;
     margin: 0;
