@@ -1,6 +1,8 @@
 .condition-border{
     padding: 20px;
     display: flex;
+    width: 300px;
+    margin-right: 300px;
 }
 
 .property-image{
