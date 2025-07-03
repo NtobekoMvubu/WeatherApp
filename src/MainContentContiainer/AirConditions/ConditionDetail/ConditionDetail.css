@@ -1,0 +1,20 @@
+.condition-border{
+    padding: 20px;
+    display: flex;
+}
+
+.property-image{
+    margin-top: 40px;
+}
+
+.condition-info{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#condition-title{
+    font-size: 1.8em;
+}
+
+#condition-value{
+font-size: 1.3em;
+}

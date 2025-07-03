@@ -7,6 +7,7 @@ import styled from "styled-components";
 import HourlyForecast from "./HourlyForecast/HourlyForecast.jsx";
 export const weatherContext = createContext();
 import './MainComponent.css'
+import AirConditions from "./AirConditions/AirConditions.jsx";
 
 
 const Div = styled.div`
@@ -25,13 +26,13 @@ function MainContentContainer(){
         <main>
             <weatherContext.Provider value={{weather, setWeather, forecast, setForecast, alert, setAlert}}>
             <SearchComponent/>
-            <Div>
+            <section className="weatherinfo">
                 <TodayWeather>
                     <MainWeather/>
                     <section className="hourlyForecastContainer">
-                        <secton>
+                        <section>
                             <p id="hourForecast_label">Today's Forecast</p>
-                        </secton>
+                        </section>
                         <section className="hourlyContainer">
                         {                        
                         forecast && forecast.length > 0 ? (
@@ -54,7 +55,10 @@ function MainContentContainer(){
                         })
                     ) : (<p>No Forecast Data available</p>)}
                 </section>
-            </Div>
+            </section>
+                <section className="airConditionsContainer">
+                    <AirConditions/>
+                </section>
             
             </weatherContext.Provider>
         </main>

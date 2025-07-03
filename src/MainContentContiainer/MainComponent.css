@@ -26,3 +26,15 @@
     width: 30%;
     padding: 20px;
 }
+
+.weatherinfo{
+    display: flex;
+}
+
+.airConditionsContainer{
+    color: white;
+    border-radius: 25px;
+    background-color: #202C3C;
+    margin: 30px;
+    padding: 20px;
+}

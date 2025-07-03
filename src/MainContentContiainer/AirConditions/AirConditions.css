@@ -1,0 +1,9 @@
+.weather-metrics{
+    display: flex;
+    flex-direction: columns;
+}
+
+.air-metric-row{
+    display: flex;
+    justify-content: space-around;
+}
