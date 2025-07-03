@@ -4,6 +4,7 @@ import {format} from "date-fns"
 import { weatherContext } from "../MainComponent";
 function MainWeather(){
     const {weather, setWeather} = useContext(weatherContext)
+    const {forecast, setforecast} = useContext(weatherContext);
     let locationTitle = weather? weather.location.region + ', ' + weather.location.country :  "Location"
     let temp = weather ? weather.current.temp_c : "temp";
     console.log(weather);
@@ -19,13 +20,17 @@ function MainWeather(){
         return format(string.substring(0, 10), 'EE MM yyyy')
     }
 
+    function retrieveChanceOfRain(){
+        return forecast[0]?.day?.daily_chance_of_rain + "%" || null
+    }
+
     return (
         <section className={styles.mainWeather}>
             {!weather ? <p className={weather}>"No Information Found..."</p>:
             <section className={styles.mainInfo}>
                 <section className={styles.information}>
                     <h2>{locationTitle}</h2>
-                    <h5>Chance of rain</h5>
+                    <h5>Chance of rain {retrieveChanceOfRain()}</h5>
                     <h2>{temp}°C</h2>
                 </section>
                 <section>
